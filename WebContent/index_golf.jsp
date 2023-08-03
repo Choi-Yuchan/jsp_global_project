@@ -62,6 +62,15 @@
 			<p>Copyright &copy; 2023 Team Project, Inc.</p>
 		</div>
 	</footer>
+	
+	<!-- 골프장 -->
+	<%@ include file="topmenu_golf.jsp" %>
+	<section>
+		<div class="title">골프연습장 회원관리 프로그램</div>
+	
+	
+	</section>
+	<%@ include file="footer_golf.jsp" %>
 
 </body>
 </html>

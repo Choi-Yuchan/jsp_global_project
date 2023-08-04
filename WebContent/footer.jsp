@@ -12,15 +12,12 @@
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body class="d-flex vw-100 vh-100 text-center flex-column justify-content-between">
-	<jsp:include page="./header.jsp"></jsp:include>
-	<!-- 메인 콘텐츠 -->
-	<main>
-		<div class="container mt-5">
-			<h1>메인 콘텐츠 영역</h1>
-			<p>이곳에 원하는 내용을 작성하세요.</p>
+<body>
+	<!-- 푸터 -->
+	<footer class="bg-dark text-light text-center py-3">
+		<div class="container">
+			<p>Copyright &copy; 2023 Team Project, Inc.</p>
 		</div>
-	</main>
-	<jsp:include page="./footer.jsp"></jsp:include>
+	</footer>
 </body>
 </html>

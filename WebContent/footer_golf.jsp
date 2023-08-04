@@ -10,7 +10,7 @@
 </head>
 <body>
 <footer>
-HRDKOREA Copyright@2015 All rights reserved. Human Resources Development Service of Korea
+Copyright &copy; 2023 Team Project, Inc.
 </footer>
 </body>
 </html>

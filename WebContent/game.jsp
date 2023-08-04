@@ -1,5 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="java.util.Random"%>
+<%@page import="java.util.HashSet"%>
+<%@page import="java.util.Set"%>
 
 <!DOCTYPE html>
 <html>
@@ -8,65 +11,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>프로젝트-미니게임</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" ></script>
+<link href="./css/style_game.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <style>
-ul.tab_wr {
-	list-style: none;
-}
 
-.tabmenu {
-	max-width: 600px;
-	margin: 0 auto;
-	position: relative;
-}
-
-.tabmenu ul {
-	position: relative;
-}
-
-.tabmenu ul li {
-	display: inline-block;
-	width: 33.33%;
-	float: left;
-	text-align: center;
-	background: #f9f9f9;
-	line-height: 40px;
-}
-
-.tabmenu label {
-	display: block;
-	width: 100%;
-	height: 40px;
-	line-height: 40px;
-}
-
-.tabmenu input {
-	display: none;
-}
-
-.tabCon {
-	display: none;
-	width: 100%;
-	text-align: left;
-	padding: 20px;
-	position: absolute;
-	left: 0;
-	top: 40px;
-	box-sizing: border-box;
-	border: 5px solid #f9f9f9;
-}
-
-.tabmenu input:checked ~ label {
-	background: #ccc;
-}
-
-.tabmenu input:checked ~ .tabCon {
-	display: block;
-}
 </style>
 </head>
 
-<body class="d-flex vw-100 vh-100 text-center flex-column justify-content-between">
+<body class="d-flex vw-100 text-center flex-column justify-content-between">
 	<!-- 헤더 -->
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -97,25 +49,50 @@ ul.tab_wr {
 		</nav>
 	</header>
 
+	<!-- top banner -->
+	<div class="top_banner"><img src="./image/game_bnr.png" alt="..."></div>
 	<!-- 메인 콘텐츠 -->
-	<main>
-		<div class="container-sm"><img src="./image/game_bnr.png" alt="..."></div>
-
+	<main class="container-fluid">
 		<div class="tabmenu out-tabmenu">
-			<ul class="tab_wr"> 
-				<li id="tab1" class="btnCon"><input type="radio" checked name="tabmenu" id="tabmenu1"> <label for="tabmenu1">랜덤로또</label>
+			<ul class="tab_wr">
+				<li id="tab1" class="btnCon"><input type="radio" checked name="tabmenu" id="tabmenu1"><label for="tabmenu1">랜덤로또</label>
 					<div class="tabCon">
 						<div class="tab_inner">
-							두번째 내용
-							세번째 내용
-						</div>
+							<ul class="">
+								<%
+									Set<Integer> lottoNumbers = new HashSet<>();
+									Random random = new Random();
 
-							<button onclick="window.location.reload();">새로운 번호 생성</button>
+									while (lottoNumbers.size() < 6) {
+										int randomNumber = random.nextInt(45) + 1;
+										lottoNumbers.add(randomNumber);
+									}
+
+									for (Integer number : lottoNumbers) {
+										out.println("<li class=\"lotto-number text-center\">" + number + "</li>");
+									}
+								%>
+							</ul>
 						</div>
-					</div></li>
+					</div>
+				</li>
+				<!-- 탭 두번째 내용 -->
 				<li id="tab2" class="btnCon"><input type="radio" name="tabmenu"
-					id="tabmenu2"> <label for="tabmenu2">가위바위보</label>
-					<div class="tabCon">두번째 내용</div></li>
+					id="tabmenu2"><label for="tabmenu2">가위바위보</label>
+					<div class="tabCon">
+						<div class="tab_inner">
+							<div class="user-card">
+								<h2>사용자</h2>
+								<form method="post" action="">
+									<button type="submit" name="choice" value="가위">가위</button>
+									<button type="submit" name="choice" value="바위">바위</button>
+									<button type="submit" name="choice" value="보">보</button>
+								</form>
+								<div id="user-result" class="result"></div>
+							</div>
+						</div>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</main>

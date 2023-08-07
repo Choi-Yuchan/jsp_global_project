@@ -35,13 +35,11 @@
 					class="collapse navbar-collapse container-fluid justify-content-between"
 					id="navbarNav">
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="./index.jsp">홈</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="./index_golf.jsp">골프장</a></li>
+						<li class="nav-item"><a class="nav-link" aria-current="page" href="./index.jsp">홈</a></li>
+						<li class="nav-item"><a class="nav-link" href="./index_golf.jsp">골프장</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">홈쇼핑</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">투표</a></li>
-						<li class="nav-item"><a class="nav-link" href="./game.jsp">미니게임</a></li>
+						<li class="nav-item"><a class="nav-link active"  href="./game.jsp">미니게임</a></li>
 					</ul>
 				</div>
 			</div>
@@ -59,19 +57,21 @@
 						<div class="tab_inner">
 							<ul class="">
 								<%
+									String[] colorClass ={"ten", "twenty", "thirty", "forty", "last"};
 									Set<Integer> lottoNumbers = new HashSet<>();
-									Random random = new Random();
+									
 
 									while (lottoNumbers.size() < 6) {
-										int randomNumber = random.nextInt(45) + 1;
+										int randomNumber = (int)(Math.random()*45 + 1);
 										lottoNumbers.add(randomNumber);
 									}
 
 									for (Integer number : lottoNumbers) {
-										out.println("<li class=\"lotto-number text-center\">" + number + "</li>");
+										out.println("<li class=\"lotto-number text-center "+ colorClass[number/10] + "\">" + number + "</li>");
 									}
 								%>
 							</ul>
+							<div class="w-100 d-flex justify-content-center"><button class="btn mb-3 new-btn" onclick="window.location.reload();">NEW NUMBER</button></div>
 						</div>
 					</div>
 				</li>

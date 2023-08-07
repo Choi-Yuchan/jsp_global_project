@@ -6,11 +6,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>프로젝트</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-	rel="stylesheet" />
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="d-flex vw-100 vh-100 text-center flex-column justify-content-between">
 <!-- 헤더 -->
@@ -44,16 +41,15 @@
 	</header>
 
 	<!-- 메인 콘텐츠 -->
-	<main>
-		<div class="container mt-5">
+	<main style="background: url(https://i.ytimg.com/vi/RF6Otfd7wag/maxresdefault.jpg); background-position:center; background-position: top; background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%;">
+		<!-- <div class="container mt-5">
 			<h1>메인 콘텐츠 영역</h1>
 			<p>이곳에 원하는 내용을 작성하세요.</p>
 			
-			
-		</div>
+		</div> -->
 	</main>
 	<!-- 푸터 -->
-	<footer class="bg-dark text-light text-center py-3">
+	<footer class="bg-dark text-light text-center py-1">
 		<div class="container">
 			<p>Copyright &copy; 2023 Team Project, Inc.</p>
 		</div>

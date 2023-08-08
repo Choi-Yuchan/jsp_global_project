@@ -9,8 +9,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<footer>
-Copyright &copy; 2023 Team Project, Inc.
-</footer>
+	<footer> Copyright &copy; 2023 Team Project, Inc. </footer>
 </body>
 </html>

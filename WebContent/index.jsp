@@ -12,10 +12,8 @@
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body
-	class="d-flex vw-100 vh-100 text-center flex-column justify-content-between">
+<body class="d-flex vw-100 vh-100 text-center flex-column justify-content-between">
 	<jsp:include page="header.jsp" />
-
 	<!-- 메인 콘텐츠 -->
 	<main
 		style="background: url(https://i.ytimg.com/vi/RF6Otfd7wag/maxresdefault.jpg); background-position: center; background-position: top; background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%;">

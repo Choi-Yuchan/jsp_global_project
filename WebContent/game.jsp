@@ -132,15 +132,12 @@
 		// 승패 결정 조건 비교
 		if (com === player) {
 			result = "비겼습니다!";
-			drawCount++;
 		} else if ((com === "가위" && player === "보")
 				|| (com === "바위" && player === "가위")
 				|| (com === "보" && player === "바위")) {
 			result = "패배!";
-			loseCount++;
 		} else {
 			result = "승리!";
-			winCount++;
 		}
 
 		// 결과 메시지 출력

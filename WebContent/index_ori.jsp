@@ -34,7 +34,7 @@
 							aria-current="page" href="./index.jsp">홈</a></li>
 						<li class="nav-item"><a class="nav-link"
 							href="./index_golf.jsp">골프장</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">홈쇼핑</a></li>
+						<li class="nav-item"><a class="nav-link" href="./index.jsp"">홈쇼핑</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">투표</a></li>
 						<li class="nav-item"><a class="nav-link" href="./game.jsp">미니게임</a></li>
 					</ul>

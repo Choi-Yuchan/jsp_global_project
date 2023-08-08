@@ -14,8 +14,7 @@
 </head>
 <body class="d-flex vw-100 vh-100 text-center flex-column justify-content-between">
 <!-- 헤더 -->
-	<header class = "top_nav" style = "position: fixed; top: 0px; width: 100%; height: 40px; background-color:dark; color: dark; text-align: center; line-height: 40px">
-	<div style = "background: white;">쇼핑몰 회원관리 ver 1.0</div>
+	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="./index.jsp"> <!-- <img src="/images/logo.png" id="logo-image" /> -->
@@ -32,11 +31,12 @@
 					id="navbarNav">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="index_ori.jsp">홈</a></li>
+							aria-current="page" href="./index.jsp">홈</a></li>
 						<li class="nav-item"><a class="nav-link"
-							href="regMember.jsp">회원등록</a></li>
-						<li class="nav-item"><a class="nav-link" href="listViewMember.jsp">회원목록조회/수정</a></li>
-						<li class="nav-item"><a class="nav-link" href="salesView.jsp">회원매출조회</a></li>
+							href="./index_golf.jsp">골프장</a></li>
+						<li class="nav-item"><a class="nav-link" href="index_shop.jsp"">홈쇼핑</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">투표</a></li>
+						<li class="nav-item"><a class="nav-link" href="./game.jsp">미니게임</a></li>
 					</ul>
 				</div>
 			</div>
@@ -46,11 +46,17 @@
 	<!-- 메인 콘텐츠 -->
 	<main>
 		<div class="container mt-5">
-
+			<h1>메인 콘텐츠 영역</h1>
+			<p>이곳에 원하는 내용을 작성하세요.</p>
 			
 			
 		</div>
 	</main>
-
+	<!-- 푸터 -->
+	<footer class="bg-dark text-light text-center py-3">
+		<div class="container">
+			<p>Copyright &copy; 2023 Team Project, Inc.</p>
+		</div>
+	</footer>
 </body>
 </html>

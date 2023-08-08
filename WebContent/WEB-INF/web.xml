@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <web-app>
 <servlet-mapping>
 <servlet-name>default</servlet-name>
@@ -10,4 +11,15 @@
 <url-pattern>*.jsp</url-pattern>
 <url-pattern>*.jspx</url-pattern>
 </servlet-mapping>
+=======
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaeehttp://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+id="WebApp_ID" version="4.0">
+
+<display-name>GOLF</display-name>
+
+
+
+>>>>>>> 908f21a034a225f94652afcc112d577683a41511
 </web-app>

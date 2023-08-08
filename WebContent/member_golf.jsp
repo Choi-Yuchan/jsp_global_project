@@ -4,6 +4,8 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.*" %>
+
+<%@ page import="GolfDto.Member" %>
 <!DOCTYPE html>
 
 <html>
@@ -27,49 +29,18 @@
 			<th>수강료</th>
 			<th>등급</th>
 		</tr>
-		<%
-		try{
-			Class.forName("oracle.jdbc.OracleDriver");
-			Connection con = DriverManager.getConnection
-			                 ("jdbc:oracle:thin:@//localhost:1521/xe","scott","tiger");
-			
-			Statement stmt = con.createStatement();
-			
-			request.setCharacterEncoding("UTF-8");
-			String sql = "SELECT ";
-			       sql+= "(SUBSTR(C.regist_month,0,4) ";
-		           sql+= "|| '년' ";
-		           sql+= "|| SUBSTR(C.regist_month,5,2) ";
-		           sql+= "|| '월' )regist_month, ";
-			       sql+= "C.c_no, ";
-			       sql+= "M.c_name, ";
-			       sql+= "T.class_name, ";
-			       sql+= "C.class_area, ";
-			       sql+= "('₩' || TO_CHAR(C.tuition,'fm999,999,999')) tuition, ";
-			       sql+= "M.grade ";      
-			       sql+= "FROM TBL_TEACHER_202201 T, TBL_MEMBER_202201 M, TBL_CLASS_202201 C ";
-			       sql+= "WHERE C.c_no = M.c_no ";
-			       sql+= "AND C.teacher_code = T.teacher_code";
-			       
-			ResultSet rs = stmt.executeQuery(sql);
-			while(rs.next()){%>
-		<tr>
-			<td><%=rs.getString("regist_month") %></td>
-			<td><%=rs.getString("c_no") %></td>
-			<td><%=rs.getString("c_name") %></td>
-			<td><%=rs.getString("class_name") %></td>
-			<td><%=rs.getString("class_area") %></td>
-			<td><%=rs.getString("tuition") %></td>
-			<td><%=rs.getString("grade") %></td>
-		</tr>
-		<%}
-			con.close();
-			stmt.close();
-			
-		}catch(Exception e){
-			
-		}
-		%>		
+
+			<c:forEach var="data" items="${memberList}">
+				<tr>
+					<td><c:out value="${data.m_date}"/></td>
+					<td><c:out value="${data.m_num}"/></td>
+					<td><c:out value="${data.m_name}"/></td>
+					<td><c:out value="${data.c_name}"/></td>
+					<td><c:out value="${data.c_area}"/></td>
+					<td><c:out value="${data.total_fee}"/></td>
+					<td><c:out value="${data.grade}"/></td>
+				</tr>
+			</c:forEach>
 		
 	</table>
 	</div>

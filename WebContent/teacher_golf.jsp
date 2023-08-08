@@ -4,6 +4,8 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.*" %>
+
+<%@ page import="GolfDto.Teacher" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,45 +26,15 @@
 			<th>수강료</th>
 			<th>강사자격취득일</th>
 		</tr>
-		<%
-		try{
-			Class.forName("oracle.jdbc.OracleDriver");
-			Connection con = DriverManager.getConnection
-			                 ("jdbc:oracle:thin:@//localhost:1521/xe","scott","tiger");
-			
-			Statement stmt = con.createStatement();
-			
-			request.setCharacterEncoding("UTF-8");
-            String sql = "SELECT " +
-                    "teacher_code, " +
-                    "teacher_name, " +
-                    "class_name, " +
-                    "('₩' || TO_CHAR(class_price,'fm999,999,999')) class_price, " +
-                    "(SUBSTR(teacher_regist_date,0,4) " +
-                    "|| '년' " +
-                    "|| SUBSTR(teacher_regist_date,5,2) " +
-                    "|| '월' " +
-                    "|| SUBSTR(teacher_regist_date,7,2) " +
-                    "|| '일' ) teacher_regist_date " +
-                    "FROM tbl_teacher_202201";
-			       
-			ResultSet rs = stmt.executeQuery(sql);
-			while(rs.next()){%>
-		<tr>
-			<td><%=rs.getString("teacher_code") %></td>
-			<td><%=rs.getString("teacher_name") %></td>
-			<td><%=rs.getString("class_name") %></td>
-			<td><%=rs.getString("class_price") %></td>
-			<td><%=rs.getString("teacher_regist_date") %></td>
-		</tr>
-		<%}
-			con.close();
-			stmt.close();
-			
-		}catch(Exception e){
-			
-		}
-		%>		
+			<c:forEach var="data" items="${list }">
+			<tr>
+				<td>${ data.t_code}</td>
+				<td>${ data.t_name}</td>
+				<td>${ data.c_name}</td>
+				<td>${ data.c_fee}</td>
+				<td>${ data.t_date}</td>
+			</tr>
+			</c:forEach>
 		
 	</table>
 	</div>

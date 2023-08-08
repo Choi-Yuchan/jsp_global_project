@@ -7,17 +7,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="style_golf.css?ver=1">
+<link rel="stylesheet" href="./css/style_golf.css">
 </head>
 <body>
 <header>골프연습장 회원관리 프로그램 ver 1.0</header>
 <nav>
 <ul>
-	<li><a href="teacher_golf.jsp">강사조회</a></li>
-	<li><a href="insert_golf.jsp">수강신청</a></li>
-	<li><a href="member_golf.jsp">회원정보조회</a></li>
-	<li><a href="result_golf.jsp">강사매출현황</a></li>
-	<li><a href="index_golf.jsp">홈으로</a></li>
+	<li><a href="teacher_golf.do">강사조회</a></li>
+	<li><a href="insert_golf.do">수강신청</a></li>
+	<li><a href="member_golf.do">회원정보조회</a></li>
+	<li><a href="result_golf.do">강사매출현황</a></li>
+	<li><a href="index_golf.do">홈으로</a></li>
 </ul>
 </nav>
 </body>

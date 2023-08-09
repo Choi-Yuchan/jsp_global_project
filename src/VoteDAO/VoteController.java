@@ -18,7 +18,7 @@ import VoteCommand.VoteMember;
 import VoteCommand.VoteResult;
 
 
-@WebServlet("*.do")
+@WebServlet("*.vote")
 public class VoteController extends HttpServlet {
 
    private static final long serialVersionUID = 1L;
@@ -57,31 +57,31 @@ public class VoteController extends HttpServlet {
 
       System.out.println("=================" + context);
 
-      if (comm.equals("/main.do")) {
+      if (comm.equals("/main.vote")) {
          command = new VoteMain();
          command.execute(request, response);
 
          viewPage = "index_vote.jsp";
          
-      } else if (comm.equals("/memberList.do")) { //후보자 조회
+      } else if (comm.equals("/memberList.vote")) { //후보자 조회
          command = new MemberList();
          command.execute(request, response);
 
          viewPage = "memberList_vote.jsp";
          
-      } else if (comm.equals("/voteMember.do")) {
+      } else if (comm.equals("/voteMember.vote")) {
          command = new VoteMember();
          command.execute(request, response);
 
          viewPage = "voteMember.jsp";
          
-      } else if (comm.equals("/voteList.do")) {
+      } else if (comm.equals("/voteList.vote")) {
          command = new VoteList();
          command.execute(request, response);
 
          viewPage = "voteList.jsp";
          
-      } else if (comm.equals("/voteResult.do")) {
+      } else if (comm.equals("/voteResult.vote")) {
          command = new VoteResult();
          command.execute(request, response);
 

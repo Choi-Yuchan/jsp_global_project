@@ -5,10 +5,10 @@
 </header>
 <nav>
 	<ul>
-		<li><a href="memberList.do">후보조회</a></li>
-		<li><a href="voteMember.do">투표하기</a></li>
-		<li><a href="voteList.do">투표검수조회</a></li>
-		<li><a href="voteResult.do">후보자등수</a></li>
+		<li><a href="memberList.vote">후보조회</a></li>
+		<li><a href="voteMember.vote">투표하기</a></li>
+		<li><a href="voteList.vote">투표검수조회</a></li>
+		<li><a href="voteResult.vote">후보자등수</a></li>
 		<li><a href="index.jsp">홈으로</a></li>
 	</ul>
 </nav>

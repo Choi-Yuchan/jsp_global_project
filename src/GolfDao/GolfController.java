@@ -47,6 +47,10 @@ public class GolfController extends HttpServlet {
 		GolfDAO golf = new GolfDAO();
 		GolfCommand golfCommand = null;
 		switch(command) {
+		case "/index.do" : 
+			
+			site = "index.jsp";
+			break;
 		case "/main.do" : 
 			
 			site = "index_golf.jsp";
@@ -57,29 +61,32 @@ public class GolfController extends HttpServlet {
 			
 			site = "teacher_golf.jsp";
 			break;
-		case "/insert_golf.do":
-			site = "insert_golf.jsp";
-			break;
-		case "/insert.do" : 
+		case "/insert_golf.do" : 
 			golfCommand = new GolfInsertCommand();
+			golfCommand.execute(request, response);
 			
-			int result = Insert.insertGolf(request, response);
-			response.setContentType("text/html; charset=UTF-8");
+//			response.setContentType("text/html; charset=UTF-8");
 
 			
-			PrintWriter out=response.getWriter();
-			if(result == 1) {
-				out.println("<script>");
-				out.println("alert('수강신청성공!'); location.href='"+context+"'; ");
-				out.println("</script>");
-				out.flush();
-			}else {
-				out.println("<script>");
-				out.println("alert('실패!'); location.href='"+context+"'; ");
-				out.println("</script>");
-				out.flush();
-			}
-			break;
+//			PrintWriter out=response.getWriter();
+//			if(result == 1) {
+//				out.println("<script>");
+//				out.println("alert('수강신청성공!'); location.href='"+context+"'; ");
+//				out.println("</script>");
+//				out.flush();
+//			}else {
+//				out.println("<script>");
+//				out.println("alert('실패!'); location.href='"+context+"'; ");
+//				out.println("</script>");
+//				out.flush();
+//			}
+			
+		    // 수강신청 이후에 회원정보 조회 페이지로 이동
+		    site = "insert_golf.jsp";
+		    break;
+		
+			
+			
 		case "/member_golf.do" : 
 			golfCommand = new GolfMemberCommand();
 			golfCommand.execute(request, response);

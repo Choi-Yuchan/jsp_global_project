@@ -42,27 +42,28 @@ public class GolfDAO {
 	    Connection conn = null;
 	    PreparedStatement ps = null;
 	    int result = 0;
-
+	   
+	    System.out.println("insert..");
 	    try {
 	        conn = datasource.getConnection();
 	        
 	        String sql = "INSERT INTO TBL_CLASS_202201 (m_date, m_num, c_area, total_fee, t_code) VALUES (?, ?, ?, ?, ?)";
 	        ps = conn.prepareStatement(sql);
 	        ps.setString(1, insert.getM_date());
-	        ps.setString(2, insert.getM_name());
-	        ps.setString(3, insert.getM_num());
-	        ps.setString(4, insert.getC_area());
-	        ps.setInt(5, Integer.parseInt(insert.getTotal_fee()));
-	        ps.setString(6, insert.getT_code());
+//	        ps.setString(2, insert.getM_name());
+	        ps.setString(2, insert.getM_num());
+	        ps.setString(3, insert.getC_area());
+	        ps.setInt(4, Integer.parseInt(insert.getTotal_fee()));
+	        ps.setString(5, insert.getT_code());
 	        
 	        result = ps.executeUpdate(); // 0: 실패, 1: 성공
-	        
+	        System.out.println(result);
 	        conn.close();
 	        ps.close();
 	    } catch (Exception e) {
 	        e.printStackTrace();
 	    }
-	    
+
 	    return result;
 	}
 	

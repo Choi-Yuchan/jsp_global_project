@@ -29,7 +29,7 @@
 			<th>수강료</th>
 			<th>등급</th>
 		</tr>
-
+  		<c:if test="${not empty memberList}">
 			<c:forEach var="data" items="${memberList}">
 				<tr>
 					<td><c:out value="${data.m_date}"/></td>
@@ -41,7 +41,7 @@
 					<td><c:out value="${data.grade}"/></td>
 				</tr>
 			</c:forEach>
-		
+		  </c:if>
 	</table>
 	</div>
 

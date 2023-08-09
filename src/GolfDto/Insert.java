@@ -66,11 +66,6 @@ public class Insert {
 		return null;
 	}
 
-	public static int insertGolf(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 	public void setT_code(String parameter) {
 		// TODO Auto-generated method stub
 		

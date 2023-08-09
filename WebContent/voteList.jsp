@@ -7,7 +7,7 @@
 request.setCharacterEncoding("UTF-8");
 //list 불러오기
 ArrayList<Vote> list = new ArrayList<Vote>();
-list = (ArrayList<Vote>)request.getAttribute("list");
+list = (ArrayList<Vote>)request.getAttribute("VoteList");
 %>
 
 <!DOCTYPE html>

@@ -20,7 +20,7 @@
 
 	<jsp:include page="topmenu_shop.jsp"></jsp:include>
 
-	<section class="container mt-5">
+	<section class="container">
 		<h2>쇼핑몰 회원관리 프로그램</h2>
 		<br>
 		<br> 쇼핑몰 회원정보와 회원매출정보 데이터베이스를 구축하고 회원관리 프로그램을 작성하는 프로그램이다.<br>

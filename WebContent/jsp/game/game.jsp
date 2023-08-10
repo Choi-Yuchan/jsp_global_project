@@ -13,7 +13,7 @@
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
 	rel="stylesheet" />
-<link href="../css/style_game.css" rel="stylesheet" />
+<link href="../../css/style_game.css" rel="stylesheet" />
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <style>
@@ -23,12 +23,12 @@
 <body
 	class="d-flex vw-100 text-center flex-column justify-content-between">
 	<!-- 헤더 -->
-	<jsp:include page="header.jsp" />
+	<jsp:include page="topmenu_game.jsp" />
 
 	<!-- top banner -->
-	<div class="top_banner">
+	<!-- <div class="top_banner">
 		<img src="../image/game_bnr.png" alt="...">
-	</div>
+	</div> -->
 	<!-- 메인 콘텐츠 -->
 	<main class="container-fluid">
 		<div class="tabmenu out-tabmenu">
@@ -102,7 +102,7 @@
 	</main>
 
 	<!-- 푸터 -->
-	<jsp:include page="footer.jsp" />
+	<jsp:include page="../footer.jsp" />
 </body>
 <script>
 	// 가위바위보 게임 함수
@@ -113,20 +113,20 @@
 
 		// 컴퓨터가 선택한 이미지 업데이트
 		if (com === "가위") {
-			document.querySelector("#com").src = "../image/scissors.png";
+			document.querySelector("#com").src = "../../image/scissors.png";
 		} else if (com === "바위") {
-			document.querySelector("#com").src = "../image/rock.png";
+			document.querySelector("#com").src = "../../image/rock.png";
 		} else if (com === "보") {
-			document.querySelector("#com").src = "../image/paper.png";
+			document.querySelector("#com").src = "../../image/paper.png";
 		}
 
 		// 사용자가 선택한 이미지 업데이트
 		if (player === "가위") {
-			document.querySelector("#player").src = "../image/scissors.png";
+			document.querySelector("#player").src = "../../image/scissors.png";
 		} else if (player === "바위") {
-			document.querySelector("#player").src = "../image/rock.png";
+			document.querySelector("#player").src = "../../image/rock.png";
 		} else if (player === "보") {
-			document.querySelector("#player").src = "../image/paper.png";
+			document.querySelector("#player").src = "../../image/paper.png";
 		}
 
 		// 승패 결정 조건 비교

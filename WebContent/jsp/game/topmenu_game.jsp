@@ -5,7 +5,7 @@
 <header>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid d-flex flex-column">
-			<h2 class="text-white py-2"> JSP Team Project</h2>
+			<h2 class="text-white py-2"> 미니 게임</h2>
 			<div
 				class="container-fluid d-flex justify-content-center align-content-center">
 				<a class="navbar-brand" href="/jsp_cyc_mvc_board/jsp/index.jsp">
@@ -20,15 +20,15 @@
 					class="collapse navbar-collapse container-fluid justify-content-between"
 					id="navbarNav">
 					<ul class="navbar-nav mr-auto">
-						<li><a href="./index.jsp" class="nav-link">홈으로</a></li>
+						<li><a href="../index.jsp" class="nav-link">홈으로</a></li>
 						<li class="nav-item"><a class="nav-link " aria-current="page"
-							href="./main.do">골프장</a></li>
+							href="/jsp_cyc_mvc_board/jsp/main.do">골프장</a></li>
 						<li class="nav-item"><a class="nav-link"
-							href="./main.shop">홈쇼핑</a></li>
+							href="/jsp_cyc_mvc_board/jsp/main.shop">홈쇼핑</a></li>
 						<li class="nav-item"><a class="nav-link"
-							href="./main.vote">투표</a></li>
+							href="/jsp_cyc_mvc_board/jsp/main.vote">투표</a></li>
 						<li class="nav-item"><a class="nav-link"
-							href="./game/game.jsp">미니게임</a></li>
+							href="./game.jsp">미니게임</a></li>
 					</ul>
 				</div>
 			</div>

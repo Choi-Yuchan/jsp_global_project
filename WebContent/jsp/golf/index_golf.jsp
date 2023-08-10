@@ -18,8 +18,8 @@
 <body class="d-flex vw-100 vh-100 flex-column justify-content-between">
 
 	<%@ include file="topmenu_golf.jsp" %>
-	<section class="container">
-		<div class="title">골프연습장 회원관리 프로그램</div>
+	<section class="container text-center">
+		<h1 class="title">골프연습장 회원관리 프로그램</h1>
 	</section>
 	<%@ include file="../footer.jsp" %>
 

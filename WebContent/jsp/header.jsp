@@ -24,7 +24,7 @@
 					<li class="nav-item"><a class="nav-link"
 						href="./index_shop.jsp">홈쇼핑</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="./index_vote.vote">투표</a></li>
+						href="./main.vote">투표</a></li>
 					<li class="nav-item"><a class="nav-link" href="./game.jsp">미니게임</a></li>
 				</ul>
 			</div>

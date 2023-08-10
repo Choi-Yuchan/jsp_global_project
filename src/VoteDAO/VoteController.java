@@ -57,37 +57,37 @@ public class VoteController extends HttpServlet {
 
       System.out.println("=================" + context);
 
-      if (comm.equals("/main.vote")) {
+      if (comm.equals("/jsp/main.vote")) {
          command = new VoteMain();
          command.execute(request, response);
 
          viewPage = "/jsp/vote/index_vote.jsp";
          
-      } else if (comm.equals("/memberList.vote")) { //후보자 조회
+      } else if (comm.equals("/jsp/memberList.vote")) { //후보자 조회
          command = new MemberList();
          command.execute(request, response);
 
          viewPage = "/jsp/vote/memberList_vote.jsp";
          
-      } else if (comm.equals("/voteMember.vote")) {
+      } else if (comm.equals("/jsp/voteMember.vote")) {
          command = new VoteMember();
          command.execute(request, response);
 
          viewPage = "/jsp/vote/voteMember.jsp";
          
-      } else if (comm.equals("/voteList.vote")) {
+      } else if (comm.equals("/jsp/voteList.vote")) {
          command = new VoteList();
          command.execute(request, response);
 
          viewPage = "/jsp/vote/voteList.jsp";
          
-      } else if (comm.equals("/voteResult.vote")) {
+      } else if (comm.equals("/jsp/voteResult.vote")) {
          command = new VoteResult();
          command.execute(request, response);
 
          viewPage = "/jsp/vote/voteResult.jsp";
          
-      } else if (comm.equals("/vote.do")) {
+      } else if (comm.equals("/jsp/vote.do")) {
          int result = vote.insertVote(request, response);
          response.setContentType("text/html; charset=UTF-8");
          PrintWriter out = response.getWriter();

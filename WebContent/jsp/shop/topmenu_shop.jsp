@@ -19,10 +19,10 @@
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="../index.jsp">홈</a></li>
-					<li class="nav-item"><a class="nav-link" href="../regMember.shop">회원등록</a></li>
+					<li class="nav-item"><a class="nav-link" href="./regMember.shop">회원등록</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="../listViewMember.shop">회원목록조회/수정</a></li>
-					<li class="nav-item"><a class="nav-link" href="../salesView.shop">회원매출조회</a></li>
+						href="./listViewMember.shop">회원목록조회/수정</a></li>
+					<li class="nav-item"><a class="nav-link" href="./salesView.shop">회원매출조회</a></li>
 				</ul>
 			</div>
 		</div>

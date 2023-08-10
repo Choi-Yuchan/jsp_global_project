@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import ShopCommand.ListCommand;
 import ShopCommand.ShopCommand;
 import ShopCommand.ShopListCommand;
+import ShopCommand.ShopMain;
 import ShopCommand.ShopWriteCommand;
 
 
@@ -53,28 +54,32 @@ public class ShopController extends HttpServlet {
       System.out.println(com);
       System.out.println("uri: " + uri);
       System.out.println("conPath: " + conPath);
-      
-      if (com.equals("/listViewMember.shop")) {
+      if (com.equals("/jsp/main.shop")) {
+    	  command = new ShopMain();
+          command.execute(request, response);
+
+          viewPage = "/jsp/shop/index_shop.jsp";
+      }else if (com.equals("/jsp/listViewMember.shop")) {
     	  command = new ListCommand();// BCommand인터페이스를 구현할 자손이므로 클래스생성해야함
          command.execute(request, response);
          // 해당request객체를 전달할 view결정
          viewPage = "/jsp/shop/listViewMember.jsp";
-      } else if (com.equals("/regMember.shop")) {
+      } else if (com.equals("/jsp/regMember.shop")) {
     	  command = new ShopListCommand();// BCommand인터페이스를 구현할 자손이므로 클래스생성해야함
           command.execute(request, response);
           // 해당request객체를 전달할 view결정
           viewPage = "/jsp/shop/regMember.jsp";
-      }else if (com.equals("/salesView.shop")) {
+      }else if (com.equals("/jsp/salesView.shop")) {
     	  command = new ShopListCommand();// BCommand인터페이스를 구현할 자손이므로 클래스생성해야함
           command.execute(request, response);
           // 해당request객체를 전달할 view결정
-          viewPage = "salesView.jsp";
-      }else if (com.equals("/write.shop")) {
+          viewPage = "/jsp/shop/salesView.jsp";
+      }else if (com.equals("/jsp/write.shop")) {
           command = new ShopWriteCommand();
           command.execute(request, response);
           
-          viewPage = "listViewMember.shop";
-       }
+          viewPage = "/jsp/listViewMember.shop";
+       } 
       /*
            클라이언트에게 list.do는 list.jsp로 forwarding을 시키겠다는 의미이다. forwarding은
            BListCommand클래스에게 메모리를 올린 request, response 객체 정보를 list.jsp에서는 사용가능하다는 의미이다.

@@ -49,19 +49,19 @@ public class GolfController extends HttpServlet {
 		switch(command) {
 		case "/index.do" : 
 			
-			site = "index.jsp";
+			site = "/jsp/index.jsp";
 			break;
-		case "/main.do" : 
+		case "/jsp/main.do" : 
 			
-			site = "index_golf.jsp";
+			site = "/jsp/golf/index_golf.jsp";
 			break;
-		case "/teacher_golf.do" : 
+		case "/jsp/teacher_golf.do" : 
 			golfCommand = new GolfTeacherCommand();
 			golfCommand.execute(request, response);
 			
-			site = "teacher_golf.jsp";
+			site = "/jsp/golf/teacher_golf.jsp";
 			break;
-		case "/insert_golf.do" : 
+		case "/jsp/insert_golf.do" : 
 			golfCommand = new GolfInsertCommand();
 			golfCommand.execute(request, response);
 			
@@ -82,23 +82,23 @@ public class GolfController extends HttpServlet {
 //			}
 			
 		    // 수강신청 이후에 회원정보 조회 페이지로 이동
-		    site = "insert_golf.jsp";
+		    site = "/jsp/golf/insert_golf.jsp";
 		    break;
 		
 			
 			
-		case "/member_golf.do" : 
+		case "/jsp/member_golf.do" : 
 			golfCommand = new GolfMemberCommand();
 			golfCommand.execute(request, response);
 			
-			site = "member_golf.jsp";
+			site = "/jsp/golf/member_golf.jsp";
 			break;
 			
-		case "/result_golf.do" : 
+		case "/jsp/result_golf.do" : 
 		    golfCommand = new GolfResultCommand();
 		    golfCommand.execute(request, response);
 		    
-		    site = "result_golf.jsp";
+		    site = "/jsp/golf/result_golf.jsp";
 		    break;
 		default :
 			site = "/main.do";

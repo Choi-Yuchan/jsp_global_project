@@ -58,12 +58,12 @@ public class ShopController extends HttpServlet {
     	  command = new ListCommand();// BCommand인터페이스를 구현할 자손이므로 클래스생성해야함
          command.execute(request, response);
          // 해당request객체를 전달할 view결정
-         viewPage = "listViewMember.jsp";
+         viewPage = "/jsp/shop/listViewMember.jsp";
       } else if (com.equals("/regMember.shop")) {
     	  command = new ShopListCommand();// BCommand인터페이스를 구현할 자손이므로 클래스생성해야함
           command.execute(request, response);
           // 해당request객체를 전달할 view결정
-          viewPage = "regMember.jsp";
+          viewPage = "/jsp/shop/regMember.jsp";
       }else if (com.equals("/salesView.shop")) {
     	  command = new ShopListCommand();// BCommand인터페이스를 구현할 자손이므로 클래스생성해야함
           command.execute(request, response);

@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>강사매출현황</title>
+<link rel="stylesheet" href="../css/style_golf.css">
 </head>
 <body>
 <%@ include file="topmenu_golf.jsp" %>

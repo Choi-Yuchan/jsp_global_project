@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>수강신청</title>
+<link rel="stylesheet" href="../css/style_golf.css">
 </head>
 
 <%@ include file="topmenu_golf.jsp" %>

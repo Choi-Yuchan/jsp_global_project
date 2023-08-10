@@ -12,6 +12,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원정보조회</title>
+<link rel="stylesheet" href="../css/style_golf.css">
 </head>
 <body>
 <%@ include file="topmenu_golf.jsp" %>

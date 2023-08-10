@@ -61,31 +61,31 @@ public class VoteController extends HttpServlet {
          command = new VoteMain();
          command.execute(request, response);
 
-         viewPage = "index_vote.jsp";
+         viewPage = "/jsp/vote/index_vote.jsp";
          
       } else if (comm.equals("/memberList.vote")) { //후보자 조회
          command = new MemberList();
          command.execute(request, response);
 
-         viewPage = "memberList_vote.jsp";
+         viewPage = "/jsp/vote/memberList_vote.jsp";
          
       } else if (comm.equals("/voteMember.vote")) {
          command = new VoteMember();
          command.execute(request, response);
 
-         viewPage = "voteMember.jsp";
+         viewPage = "/jsp/vote/voteMember.jsp";
          
       } else if (comm.equals("/voteList.vote")) {
          command = new VoteList();
          command.execute(request, response);
 
-         viewPage = "voteList.jsp";
+         viewPage = "/jsp/vote/voteList.jsp";
          
       } else if (comm.equals("/voteResult.vote")) {
          command = new VoteResult();
          command.execute(request, response);
 
-         viewPage = "voteResult.jsp";
+         viewPage = "/jsp/vote/voteResult.jsp";
          
       } else if (comm.equals("/vote.do")) {
          int result = vote.insertVote(request, response);

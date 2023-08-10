@@ -20,11 +20,11 @@
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="./index.jsp">홈</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="./index_golf.jsp">골프장</a></li>
+						href="./main.do">골프장</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="./index_shop.jsp">홈쇼핑</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="./index_vote.jsp">투표</a></li>
+						href="./index_vote.vote">투표</a></li>
 					<li class="nav-item"><a class="nav-link" href="./game.jsp">미니게임</a></li>
 				</ul>
 			</div>

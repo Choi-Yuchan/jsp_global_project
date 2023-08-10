@@ -17,7 +17,7 @@
 	<li><a href="insert_golf.do">수강신청</a></li>
 	<li><a href="member_golf.do">회원정보조회</a></li>
 	<li><a href="result_golf.do">강사매출현황</a></li>
-	<li><a href="index_golf.do">골프 홈으로</a></li>
+	<li><a href="main.do">골프 홈으로</a></li>
 	<li><a href="index.jsp">홈으로</a>
 </ul>
 </nav>

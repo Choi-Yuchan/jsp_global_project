@@ -18,7 +18,7 @@
 }
 </style>
 </head>
-<body>
+<body class="d-flex vw-100 vh-100 flex-column justify-content-between">
 
 	<!-- 지역구의원투표 -->
 	<jsp:include page="topmenu_vote.jsp" />
@@ -27,7 +27,7 @@
 
 
 	</section>
-	<jsp:include page="footer_vote.jsp" />
+	<jsp:include page="../footer.jsp" />
 
 </body>
 </html>

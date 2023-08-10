@@ -22,7 +22,7 @@ list = (ArrayList<Result>)request.getAttribute("voteResult");
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body class="d-flex vw-100 vh-100 flex-column justify-content-between">
 <%@ include file="topmenu_vote.jsp" %>
 <section>
 <h2>. 후보자등수 .</h2>
@@ -47,6 +47,6 @@ list = (ArrayList<Result>)request.getAttribute("voteResult");
 	</table>
 </div>
 </section>
-<%@ include file="footer_vote.jsp" %>
+<%@ include file="../footer.jsp" %>
 </body>
 </html>
